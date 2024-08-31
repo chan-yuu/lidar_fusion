@@ -1,0 +1,31 @@
+<launch>
+
+
+	<!-- 设置雷达数量 -->
+	<param name="lidar_num" value="2" />
+
+	<param name="lidar_topic1" value="/left/rslidar_points" />
+	<!-- <param name="lidar1_to_lidar_link/x" value="0.0" />
+	<param name="lidar1_to_lidar_link/y" value="-0.2" />
+	<param name="lidar1_to_lidar_link/z" value="0.0" />
+	<param name="lidar1_to_lidar_link/roll" value="0.0" />
+	<param name="lidar1_to_lidar_link/pitch" value="0.0" />
+	<param name="lidar1_to_lidar_link/yaw" value="0.0" /> -->
+
+	<param name="lidar_topic2" value="/right/rslidar_points" />
+	<!-- <param name="lidar2_to_lidar_link/x" value="0.0" />
+	<param name="lidar2_to_lidar_link/y" value="0.2" />
+	<param name="lidar2_to_lidar_link/z" value="0.0" />
+	<param name="lidar2_to_lidar_link/roll" value="0.0" />
+	<param name="lidar2_to_lidar_link/pitch" value="0.0" />
+	<param name="lidar2_to_lidar_link/yaw" value="0.0" /> -->
+
+	<!-- 设置融合后的雷达话题和frame -->
+	<!-- <param name="fusion_topic" value="fusion_lidar" />
+	<param name="fusion_frame" value="lidar_link" /> -->
+
+	<node pkg="lidar_fusion_dynamic" type="lidar_fusion_dynamic_node" name="lidar_fusion" output="screen">
+        <!-- <param name="use_dynamic_reconfigure" value="true" /> -->
+	</node>
+	
+</launch>
